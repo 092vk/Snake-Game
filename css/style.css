@@ -1,0 +1,113 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&family=Orbitron&family=Poppins:ital@1&family=Roboto+Slab&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+
+    background-color: black;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-size: 100vw 109vh;
+    background-image: url("../img/snake-frame-2-10575905.webp");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+/* .title{
+    background-color: blue;
+    height: 6vh; 
+    width:60vw;
+    position: relative;
+    text-align: center;
+    text-shadow:
+    0 0 1 black,
+    0 0 1 blue,
+    0 0 1 blue;
+
+    font-size: 2rem;
+
+}  */
+
+#hero{
+    background-color: black;
+    border: 2vw solid yellow;
+    height: 60vh;
+    width: 60vw;
+    position: relative;
+    left: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(18,1fr);
+    /* here 18 , 1fr demonstrate that 18 grids will be drawn where each will be part 1 , if specified 
+    repeat(5,2fr) then that means it will draw all posible 2 part colomn grid in available space  */
+    grid-template-rows: repeat(18,1fr);
+
+
+}
+
+.food{
+    background-color: linear-gradient(red,rgb(225, 77, 101));
+    /* linear gradient is used to mix two or more colors */
+    border-radius: 15px;
+    border: 0.05rem solid white;
+    /* border : 0.2vmin here vmin is used it means 0.2 of vieport of height or width whatever is 
+    minimum , we could have set it to vmax which means that whatever is maximum in height or width '
+    its .2 percentage size of viewport */
+
+}
+
+.head{
+    background-color: rgb(102, 255, 0);
+    border-radius: 12px;
+    border: 0.09 solid blue;
+    transition: transform 1s ease-in-out;
+    
+    /* while transform is used to apply certain appearence functions on the element which is 
+    not defined in html , for example we can rotate our element , scale it , skew it which is not
+    defined in html for styling property */
+
+    /* transition on the other hand helps us to define how the styles of elements will
+    change on doing spmething with element like hovering over it , it being active etc , 
+    transition is helpful to create a responsive effect , where objects react to users by changing their style and size */
+
+}
+.head:active{
+    transform: scale(1.001);
+}
+
+.snake{
+    background-color: rgb(148, 14, 237);
+    border-radius: 8px;
+    border: 0.08 solid yellow;
+}
+
+#scoreBox{
+    color: rgb(114, 15, 235);
+    font-size: 2rem;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bolder;
+    position: fixed;
+    /* the positio:fixed removes the elment from the actual space , now for other elements the 
+    object is invisible and we can set it position with respect to its ancestors */
+    top:1rem; 
+    right:3rem; 
+
+
+}
+
+#hiScore{
+
+    color: rgb(114, 15, 235);
+    font-size: 2rem;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bolder;
+    position: fixed;
+    top:3.5rem; 
+    right:3rem; 
+
+}
